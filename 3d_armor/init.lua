@@ -56,6 +56,33 @@ if ARMOR_MATERIALS.cactus then
 	})
 end
 
+if ARMOR_MATERIALS.tin then
+	minetest.register_tool("3d_armor:helmet_tin", {
+		description = "Tin Helmet",
+		inventory_image = "3d_armor_inv_helmet_tin.png",
+		groups = {armor_head=6, armor_heal=0, armor_use=1000},
+		wear = 0,
+	})
+	minetest.register_tool("3d_armor:chestplate_tin", {
+		description = "Tin Chestplate",
+		inventory_image = "3d_armor_inv_chestplate_tin.png",
+		groups = {armor_torso=11, armor_heal=0, armor_use=1000},
+		wear = 0,
+	})
+	minetest.register_tool("3d_armor:leggings_tin", {
+		description = "Tin Leggings",
+		inventory_image = "3d_armor_inv_leggings_tin.png",
+		groups = {armor_legs=6, armor_heal=0, armor_use=1000},
+		wear = 0,
+	})
+	minetest.register_tool("3d_armor:boots_tin", {
+		description = "Tin Boots",
+		inventory_image = "3d_armor_inv_boots_tin.png",
+		groups = {armor_feet=6, armor_heal=0, armor_use=2000},
+		wear = 0,
+	})
+end
+
 if ARMOR_MATERIALS.steel then
 	minetest.register_tool("3d_armor:helmet_steel", {
 		description = "Steel Helmet",
