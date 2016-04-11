@@ -471,7 +471,7 @@ if ARMOR_DROP == true or ARMOR_DESTROY == true then
 		local drop = {}
 		for i=1, player_inv:get_size("armor") do
 			local stack = armor_inv:get_stack("armor", i)
-			if stack:get_count() > 0 then
+			if stack:get_count() > 0 and not string.find(stack:get_name(), "admin") then
 				table.insert(drop, stack)
 				armor_inv:set_stack("armor", i, nil)
 				player_inv:set_stack("armor", i, nil)
