@@ -5,8 +5,11 @@ local use_moreores = minetest.get_modpath("moreores")
 minetest.register_tool("shields:shield_admin", {
 	description = "Admin Shield",
 	inventory_image = "shields_inv_shield_admin.png",
-	groups = {armor_shield=1000, armor_heal=100, armor_use=0},
+	groups = {armor_shield=1000, armor_heal=100, armor_use=0, not_in_creative_inventory=1 },
 	wear = 0,
+	on_drop = function(itemstack, dropper, pos)
+		return
+	end,
 })
 
 if ARMOR_MATERIALS.wood then
