@@ -46,6 +46,7 @@ if input then
 	input = nil
 end
 if not minetest.get_modpath("moreores") then
+	ARMOR_MATERIALS.tin = nil
 	ARMOR_MATERIALS.mithril = nil
 end
 if not minetest.get_modpath("ethereal") then
