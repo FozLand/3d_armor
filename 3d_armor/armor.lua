@@ -609,6 +609,7 @@ end)
 -- kill player when command issued
 minetest.register_chatcommand("die", {
 	description = "Kill current player",
+	privs = {shout=true},
 	func = function(name)
 		local player = minetest.get_player_by_name(name)
 		if player then
